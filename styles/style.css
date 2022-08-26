@@ -1,7 +1,12 @@
 /* Add your class here */
-
+.page {
+  min-width: 1100px;
+  max-width: 1600px;
+  font-family: "Helvetica New", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
 .header {
-  height: 100vh;
   min-height: 720px;
   max-height: 800px;
   padding-top: 30px;
@@ -12,16 +17,31 @@
 }
 
 .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
   /* Add flex properties here */
 }
 
 .logo {
+  height: 60px;
+  width: 196px;
+  position: absolute;
+  left: 20px;
+  top: 135 px;
 }
 
 .nav__links {
   list-style: none;
   padding-left: 0;
   margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
 }
 
 .nav__link {
@@ -29,7 +49,9 @@
   text-decoration: none;
   font-weight: bold;
 }
-
+.nav__link:hover {
+  color: #1f69c9;
+}
 /* Add the hover state styles for .nav__link here */
 
 .header__title {
@@ -37,17 +59,23 @@
   line-height: 76px;
   font-weight: 500;
   margin: 150px 0 0;
+  max-width: 544px;
 }
 
 .header__description {
   font-size: 20px;
   line-height: 30px;
   margin: 32px 0 0;
+  max-width: 465px;
 }
 
 .header__image {
   /* Write styles here */
   z-index: 1;
+  max-width: 636px;
+  position: absolute;
+  right: 0;
+  bottom: 100px;
 }
 
 .header__footer {
@@ -65,6 +93,9 @@
 .header__link {
   color: #2f80ed;
   text-decoration: none;
+}
+.header__link:hover {
+  color: #1f69c9;
 }
 
 /* Add the hover state styles for .header__link here */
@@ -92,16 +123,26 @@
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
-  margin: 24px 0 0;
+  margin: 24px 0 68px;
 }
 
 /* Add the CSS rule for your new class here. Make sure to place it before .card: parents should precede their children */
-
+.staff__picks {
+  display: flex;
+  max-width: 760px;
+  margin: auto;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
 .card {
   background-color: #fff;
   border-radius: 6px;
   padding: 32px 40px 20px 32px;
   box-sizing: border-box;
+  height: 420px;
+  width: 360px;
 }
 
 .card__content {
@@ -179,10 +220,14 @@
 
 .event-info__icon_type_calendar {
   background-image: url(../images/icon_calendar.svg);
+  height: 24px;
+  width: 24px;
 }
 
 .event-info__icon_type_pin {
   background-image: url(../images/icon_pin.svg);
+  height: 24px;
+  width: 24px;
 }
 
 .event-info__text {
@@ -201,69 +246,86 @@
   color: #2f80ed;
   text-decoration: none;
 }
-
+.events_more:hover {
+  color: #1f69c9;
+}
 /* Add the hover state styles for .events__more here */
 
 .events__cover {
-  /* flex-grow: 1;
+  flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 780px;
   max-width: 780px;
-  position: relative; */
+  position: relative;
 }
 
 .events__image {
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 
 .person {
-  /* position: absolute;
+  position: absolute;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 10px; */
+  gap: 10px;
 }
 
 .person_name_feynman {
+  position: absolute;
+  top: -30px;
+  left: 319px;
   /* Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person_name_burbidge {
+  position: absolute;
+  top: 96px;
+  right: 125px;
   /* Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person_name_cannon {
+  position: absolute;
+  right: 216px;
+  bottom: 18px;
   /* Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person_name_mitchell {
+  position: absolute;
+  bottom: 82px;
+  left: 142px;
   /* Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person_name_tarter {
+  position: absolute;
+  left: 159px;
+  top: 79px;
   /* Use correct values of top/right/bottom/left properties to position the element */
 }
 
 .person__image {
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 
 .person__image_size_l {
-  /* width: 140px; */
+  width: 140px;
 }
 
 .person__image_size_m {
-  /* width: 100px; */
+  width: 100px;
 }
 
 .person__image_size_s {
-  /* width: 80px; */
+  width: 80px;
 }
 
 .person__caption {
-  /* text-align: center;
+  text-align: center;
   font-size: 14px;
-  margin: 0; */
+  margin: 0;
 }
 
 .membership {
@@ -285,10 +347,15 @@
   list-style-type: none;
   padding: 0;
   margin: 100px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
   /* Add styles */
 }
 
 .step {
+  flex-basis: 220px;
   /* Add styles */
 }
 
@@ -316,6 +383,10 @@
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 120px;
 }
 
 .about__title {
@@ -324,13 +395,19 @@
   line-height: 30px;
   font-weight: 500;
   z-index: 1;
+  max-width: 154px;
 }
 
 .about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 32px;
   font-size: 20px;
   line-height: 30px;
   font-weight: 400;
   max-width: 660px;
+  z-index: 1;
 }
 
 .about__paragraph {
@@ -342,22 +419,45 @@
   width: 495px;
   height: 495px;
   border-radius: 50%;
+  position: absolute;
+  top: -121px;
+  left: -91px;
+  z-index: 0;
 }
 
 .footer {
   box-sizing: border-box;
+  min-height: 224px;
+  padding: 60px 80px 102px 80px;
+  background-color: #1f1f1f;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 .footer__columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
 }
 
 .footer__column_content_hours {
 }
 
 .footer__column_content_social {
+  margin-left: 100px;
 }
 
 .footer__logo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 116px;
+  width: 21px;
 }
 
 .footer__list {
@@ -368,9 +468,11 @@
 }
 
 .footer__list-item {
+  margin-top: 16px;
 }
 
 .footer__column-heading {
+  margin-bottom: 20px;
 }
 
 .footer__column-link {
@@ -381,7 +483,12 @@
 }
 
 .footer__social-icon {
+  height: 16px;
+  width: 16px;
 }
 
 .footer__copyright {
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
 }
