@@ -42,6 +42,7 @@
           your development knowledge, or just use this lovely spot to work or
           study. This is a cool place for cool students!
         </p>
+
         <img
           src="./images/inside_the_library.png"
           alt="Illustration 'Inside the library'"
@@ -295,43 +296,47 @@
       </main>
       <footer class="footer" id="footer">
         <div class="footer__columns">
-          <div class="footer__logo">
-            <img src="./images/logo_practicum.svg" alt="logo" />
+          <div class="footer__column">
+            <img
+              class="footer__logo"
+              src="./images/logo_white.png"
+              alt="logo"
+            />
           </div>
-          <div class="footer__column_content_hours">
-            <h2 class="footer__column-heading">Hours</h2>
+          <div class="footer__column footer__column_hours">
+            <h2 class="footer__heading">Hours</h2>
             <ul class="footer__list">
               <li class="footer__list-item">Weekdays: 9am - 8pm</li>
               <li class="footer__list-item">Weekends: 10am - 6pm</li>
             </ul>
           </div>
-          <div class="footer__column_content_social">
-            <h2 class="footer_column-heading">Social Media</h2>
+          <div class="footer__column footer__column_social">
+            <h2 class="footer__heading">Social Media</h2>
             <ul class="footer__list">
               <li class="footer__list-item">
-                <a class="footer__social-icon" href="#">
+                <a class="footer__column-link" href="#">
                   <img
+                    class="footer__social-icon"
                     src="./images/facebook_white.svg"
                     alt="facebook trademark"
                   />
+                  Facebook
                 </a>
-                <a class="footer__column-link" href="#">Facebook</a>
               </li>
               <li class="footer__list-item">
-                <a class="footer__social-icon" href="#">
+                <a class="footer__column-link" href="#">
                   <img
+                    class="footer__social-icon"
                     src="./images/instagram_white.svg"
-                    alt="instgram trademark"
+                    alt="instagram trademark"
                   />
+                  Instagram
                 </a>
-                <a class="footer__column-link" href="#">Instagram</a>
               </li>
             </ul>
           </div>
         </div>
-        <Footer-Copyright class="footer__copyright"
-          >© 2022 Shahjahan Sultan</Footer-Copyright
-        >
+        <p class="footer__column-copyrights">© 2022 Shahjahan Sultan</p>
         <!-- The time to mark up the footer has come, you can do it 💪 -->
       </footer>
     </div>
