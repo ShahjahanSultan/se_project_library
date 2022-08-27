@@ -428,17 +428,17 @@
   box-sizing: border-box;
   background-color: #1f1f1f;
   color: #fff;
-  padding: 60px 102px 60px 80x;
+  padding: 60px 102px 60px 80px;
 }
 .footer__columns {
   display: flex;
 }
 
-.footer__column_hours {
+.footer__column_content_hours {
   margin-left: auto;
 }
 
-.footer__column_social {
+.footer__column_content_social {
   margin-left: 100px;
 }
 
@@ -486,6 +486,6 @@
   margin-right: 10px;
 }
 
-.footer__column-copyrights {
+.footer__copyright {
   margin: 108px 0px 0px;
 }
